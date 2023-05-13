@@ -19,7 +19,7 @@ public class CustomerController {
 	// remove leading and trailing whitespace
 	// resolve  issue for our validation
 	@InitBinder
-	public void shatha(WebDataBinder dataBinder) {
+	public void initBinder(WebDataBinder dataBinder) {
 		
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		
