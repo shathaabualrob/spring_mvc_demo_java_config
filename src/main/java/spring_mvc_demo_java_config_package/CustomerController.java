@@ -19,7 +19,7 @@ public class CustomerController {
 	// remove leading and trailing whitespace
 	// resolve  issue for our validation
 	@InitBinder
-	public void initBinder(WebDataBinder dataBinder) {
+	public void shatha(WebDataBinder dataBinder) {
 		
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		
@@ -42,7 +42,8 @@ public class CustomerController {
 			BindingResult theBindingResult
 			) {
 		
-		System.out.println("Last name: |"+ theCustomer.getLastName()+"|");
+//		System.out.println("Last name: |"+ theCustomer.getLastName()+"|");
+		System.out.println("freepasses: |"+ theCustomer.getFreePasses()+"|");
 		if(theBindingResult.hasErrors())
 			return "customer-form";
 		else
