@@ -27,7 +27,18 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	<util:properties  id="countryOptions" location="classpath:../countries.properties" />
-
+	
+	<!-- Load the custom message resource -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<!-- the class name here must be the exact class name as his -->
+		<!-- class="/spring_mvc_demo_java_config/src/main/java/resources/messages.properties"> -->
+		
+		<!-- I need to tell it now where to find the file -->
+		<property name="basenames" value="resources/messages"/>
+		<!-- spring will append ".properties" at the end 
+		and will load all what's in the value resources/messages.properties -->
+	</bean>
 </beans>
 
 
